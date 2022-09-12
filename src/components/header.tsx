@@ -1,40 +1,25 @@
-import React, { useEffect, useState } from 'react';
 import '../css/header.css';
 import SmartphoneIcon from '../icons/smartphone-icon.svg';
 import ShoppingCartIcon from '../icons/shopping-cart-icon.svg';
 
 export default function Header() {
 
-    
-    const [getWindowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-
-        const setWidth = () => {
-            const newWidth = window.innerWidth;
-            setWindowWidth(newWidth);
-        }
-
-        window.addEventListener("resize", () => {
-            setWidth()
-        })
-
-        return () => window.removeEventListener('resize', setWidth);
-    }, [])
-
+    let shoppingCartNumber = 55
 
     return (
         <>
             <div className='header-container'>
                 <div id='webpage-name'>
                     <h1 id='page-name-txt'>
-                        <img src={SmartphoneIcon} alt={'Smartphone Icon'}></img>Tech Store
+                        <img src={SmartphoneIcon} alt={'Smartphone Icon'} draggable={false}></img>Tech Store
                     </h1>
                 </div>
 
                 <div>
-                  
-                    <img src={ShoppingCartIcon} alt={'Shopping Cart Icon'}></img>
+                    <div className='shopping-cart-wrapper'>
+                    <img src={ShoppingCartIcon} alt={'Shopping Cart Icon'} draggable={false}></img>
+                    <p id='number-of-items'>{shoppingCartNumber > 99 ? '99+': shoppingCartNumber}</p>
+                    </div>
                 </div>
             </div>
         </>
