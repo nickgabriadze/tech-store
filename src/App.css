@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oxygen:wght@700&family=Poppins:wght@300&family=Silkscreen&display=swap');
+
 html{
   scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
