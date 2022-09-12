@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../css/header.css';
 import SmartphoneIcon from '../icons/smartphone-icon.svg';
-import HamburgerMenuIcon from '../icons/hamburger-menu-icon.svg';
-import HamburgerMenuOpen from '../icons/hamburger-menu-open-icon.svg';
+import ShoppingCartIcon from '../icons/shopping-cart-icon.svg';
 
 export default function Header() {
 
-    const [hamburgerClicked, setHamburgerClicked] = useState(false);
+    
     const [getWindowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -29,26 +28,13 @@ export default function Header() {
             <div className='header-container'>
                 <div id='webpage-name'>
                     <h1 id='page-name-txt'>
-                        <img src={SmartphoneIcon}></img>Tech Store
+                        <img src={SmartphoneIcon} alt={'Smartphone Icon'}></img>Tech Store
                     </h1>
                 </div>
 
                 <div>
-                    {getWindowWidth <= 500 &&
-                        <div>
-                            {!hamburgerClicked && <img src={HamburgerMenuIcon} onClick={() => setHamburgerClicked(!hamburgerClicked)} className='hamburger'></img>}
-                            {hamburgerClicked && <img src={HamburgerMenuOpen} onClick={() => setHamburgerClicked(!hamburgerClicked)} className='hamburger'></img>}
-                        </div>
-                    }
-
-                    {getWindowWidth > 500 &&
-                    
-                    <div> 
-
-
-                    </div>
-                    
-                    }
+                  
+                    <img src={ShoppingCartIcon} alt={'Shopping Cart Icon'}></img>
                 </div>
             </div>
         </>
