@@ -45,7 +45,7 @@ export default function Header() {
                     
                     <div> 
 
-                        
+
                     </div>
                     
                     }
@@ -53,4 +53,4 @@ export default function Header() {
             </div>
         </>
     )
-}
+};
