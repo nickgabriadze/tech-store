@@ -1,0 +1,45 @@
+{
+    "smartphones": [
+        {
+            "id": 1,
+            "name": "iPhone 14 Pro Max",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg"
+
+        },
+        {
+            "id": 2,
+            "name": "iPhone 14 Pro",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg"
+        }
+        ,
+        {
+            "id": 3,
+            "name": "iPhone 14 Plus",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-plus.jpg"
+        }
+        ,
+        {
+            "id": 4,
+            "name": "Google Pixel 6a",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6a.jpg"
+        }
+        ,
+        {
+            "id": 5,
+            "name": "Google Pixel 6 Pro",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6-pro.jpg"
+        }
+        ,
+        {
+            "id": 6,
+            "name": "Google Pixel 6",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Samsung Galaxy S20 FE 2022",
+            "imageAddress": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-fe-5g.jpg"
+        }
+    ]
+
+}
