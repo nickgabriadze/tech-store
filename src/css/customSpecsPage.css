@@ -1,0 +1,43 @@
+.specific-device-container {
+    margin-top: 20px;
+    padding: 50px;
+}
+
+#smartphone-and-its-name {
+    padding: 20px;
+    color: #5A3F9E;
+    gap: 20px;
+    border-radius: 10px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=84, Color=#5A3F9E)";
+    -moz-box-shadow: -1px 9px 18px -7px rgba(90, 63, 158);
+    -webkit-box-shadow: -1px 9px 18px -7px rgba(90, 63, 158, 0.9);
+    box-shadow: 2px 9px 30px 2px rgba(90, 63, 158, 0.9);
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=135, Color=#5A3F9E);
+}
+
+.specifications {
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 200;
+    margin-top: 40px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=84, Color=#5A3F9E)";
+    -moz-box-shadow: -1px 9px 18px -7px rgba(90, 63, 158);
+    -webkit-box-shadow: -1px 9px 18px -7px rgba(90, 63, 158, 0.9);
+    box-shadow: 2px 9px 30px 2px rgba(90, 63, 158, 0.9);
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=135, Color=#5A3F9E);
+}
+
+.specifications > div > h4 {
+    font-weight: bold;
+    color: #5A3F9E;
+}
+
+.specifications > p {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    flex-wrap: wrap;
+    gap: 3px;
+    font-weight: bold;
+}

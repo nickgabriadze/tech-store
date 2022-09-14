@@ -42,9 +42,10 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
-    font-family: 'Open Sans', 'sans-serif';
+    font-family: 'Oxygen', 'sans-serif';
     justify-content: space-between;
     margin-top: 30px;
+    gap: 50px;
 }
 
 .shopping-cart-items > img{
@@ -58,14 +59,14 @@
 }
 
 .shopping-cart-buttons{
-    
-    background-color: #5a3f9e;
+    background-color: white;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
+    border: 1px solid #5a3f9e;
+    color: #5a3f9e;
     width: fit-content;
     height: 30px;
-    font-size: 2vh;
+    font-size: 20px;
     margin-top: 10px;
     font-family: 'Oxygen', 'sans-serif';
     cursor: pointer;

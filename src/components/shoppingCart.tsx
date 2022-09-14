@@ -1,10 +1,13 @@
 import { nanoid } from '@reduxjs/toolkit';
-import { useAppSelector } from '../features/hooks';
+import { useAppDispatch, useAppSelector } from '../features/hooks';
 import '../css/shoppingCart.css';
 import { Link } from 'react-router-dom';
+
+import { removeItem } from '../features/shoppingCartReducer';
 export default function ShoppingCart() {
     const smartphones = useAppSelector(state => state.shoppingCartReducer.items);
 
+    const dispatch = useAppDispatch();
 
     return (
         <>
@@ -24,7 +27,9 @@ export default function ShoppingCart() {
                                 <img alt={eachPhone.name + "Phone Picture"}src={eachPhone.imageAddress}></img>
                                 <div>{eachPhone.name}</div>
                                 <div>
-                                <button className='shopping-cart-buttons'>Remove</button>
+                                <button className='shopping-cart-buttons' onClick={() => dispatch(removeItem({
+                                    itemId: eachPhone.id
+                                }))}>Remove</button>
                                 <button className='shopping-cart-buttons'>Buy</button>
                                 </div>
                             </div>

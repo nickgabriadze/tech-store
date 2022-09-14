@@ -10,7 +10,7 @@ const initialState: ShoppingCart = {
     numberOfItems: 0
 }
 
-let shoppingCartReducer = createSlice({
+const shoppingCartReducer = createSlice({
     name: 'Shopping Cart',
     initialState,
 
@@ -43,9 +43,26 @@ let shoppingCartReducer = createSlice({
 
 
         },
+
+        removeItem: (state, action) => {
+            let newItemsArray = []
+            state.items.map(each => console.log(each.id))
+            for(let i = 0; i < state.items.length; i++) {
+                if(state.items[i].id !== action.payload.itemId){
+                    newItemsArray.push(state.items[i])
+            
+                }
+            }
+
+            return ({
+                ...state,
+                items: newItemsArray,
+                numberOfItems: newItemsArray.length
+            })
+        }
     }
 })
 
 
-export const { addItem } = shoppingCartReducer.actions;
+export const { addItem, removeItem } = shoppingCartReducer.actions;
 export default shoppingCartReducer.reducer;
