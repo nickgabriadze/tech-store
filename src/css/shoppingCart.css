@@ -1,7 +1,7 @@
 .shoppingCart-container{
     display: flex;
     flex-direction: column;
-
+   
 }
 
 .shoppingCart-header{  
@@ -20,6 +20,7 @@
     border-bottom-right-radius: 2rem;
     z-index: 1;
     color:#5a3f9e;
+    background-color: white;
     font-family: 'Oxygen', 'sans-serif';   
 }
 
