@@ -46,7 +46,7 @@ export default function SmartphonesBox(smartphones: {
                     <img className="moving-buttons" alt={'Arrow Pointing to the Left'} src={LeftPointingArrow} id='left-pointing-arrow'></img>
 
                     <div id='horizontal-box'>
-                           
+
                         {smartphones.devices.map(each => {
                             return (
                                 <div key={each.id} id='smartphone'>

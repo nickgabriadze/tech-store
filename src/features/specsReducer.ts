@@ -9,8 +9,8 @@ interface SpecsInterface {
         announced: string,
         dimensions: string,
         weight: string,
-        build: string, 
-        sim: string, 
+        build: string,
+        sim: string,
         displaySize: string,
         platform: string,
         chipset: string,
@@ -33,8 +33,8 @@ const initialState: SpecsInterface = {
         announced: "",
         dimensions: "",
         weight: "",
-        build: "", 
-        sim: "", 
+        build: "",
+        sim: "",
         displaySize: "",
         platform: "",
         chipset: "",
@@ -43,7 +43,7 @@ const initialState: SpecsInterface = {
         memory: "",
         camera: "",
         video: "",
-        selfieCamera:"" ,
+        selfieCamera: "",
         battery: "",
         colors: ""
     }
@@ -55,8 +55,8 @@ export const specsReducer = createSlice({
     initialState,
     reducers: {
         saveInfo: (state, action) => {
-          
-            return({
+
+            return ({
                 ...state,
                 name: action.payload.name,
                 imageAddress: action.payload.imageAddress,
@@ -65,13 +65,13 @@ export const specsReducer = createSlice({
                     announced: action.payload.announced,
                     dimensions: action.payload.dimensions,
                     weight: action.payload.weight,
-                    build: action.payload.build,   
-                    sim: action.payload.sim,   
-                    displaySize : action.payload.displaySize,
+                    build: action.payload.build,
+                    sim: action.payload.sim,
+                    displaySize: action.payload.displaySize,
                     platform: action.payload.platform,
                     chipset: action.payload.chipset,
                     cpu: action.payload.cpu,
-                    gpu : action.payload.gpu,
+                    gpu: action.payload.gpu,
                     memory: action.payload.memory,
                     camera: action.payload.camera,
                     video: action.payload.video,
@@ -85,5 +85,5 @@ export const specsReducer = createSlice({
 })
 
 
-export const {saveInfo} = specsReducer.actions;
+export const { saveInfo } = specsReducer.actions;
 export default specsReducer.reducer;
