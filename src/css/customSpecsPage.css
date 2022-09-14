@@ -28,12 +28,12 @@
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=135, Color=#5A3F9E);
 }
 
-.specifications>div>h4 {
+.specifications > div > h4 {
     font-weight: bold;
     color: #5A3F9E;
 }
 
-.specifications>p {
+.specifications > p {
     display: flex;
     flex-direction: row;
     font-size: medium;

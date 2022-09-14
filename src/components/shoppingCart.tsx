@@ -23,14 +23,14 @@ export default function ShoppingCart() {
 
                         return (
                             <div key={nanoid()} className='shopping-cart-items'>
-
-                                <img alt={eachPhone.name + "Phone Picture"} src={eachPhone.imageAddress}></img>
+                                
+                                <img alt={eachPhone.name + "Phone Picture"}src={eachPhone.imageAddress}></img>
                                 <div>{eachPhone.name}</div>
                                 <div>
-                                    <button className='shopping-cart-buttons' onClick={() => dispatch(removeItem({
-                                        itemId: eachPhone.id
-                                    }))}>Remove</button>
-                                    <button className='shopping-cart-buttons'>Buy</button>
+                                <button className='shopping-cart-buttons' onClick={() => dispatch(removeItem({
+                                    itemId: eachPhone.id
+                                }))}>Remove</button>
+                                <button className='shopping-cart-buttons'>Buy</button>
                                 </div>
                             </div>
                         )
