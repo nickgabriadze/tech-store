@@ -32,14 +32,40 @@
     text-align: center;
     width: 30px;
     height: 30px;    
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', 'sans-serif';
     border-radius: 20px;
     cursor: pointer;
-    margin-right: 20px;
-    margin-left: 20px;
+    
+  
 }
 
 #right-pointing-arrow{
-    rotate:180deg;
+   
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
 }
 
+#left-pointing-arrow{
+    margin-right: 20px;
+}
+
+.add-to-shoppingCart{
+
+    background-color: #5a3f9e;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    width: 80%;
+    margin-top: 10px;
+    font-family: 'Oxygen', 'sans-serif';
+    cursor: pointer;
+}
+
+#smartphone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
