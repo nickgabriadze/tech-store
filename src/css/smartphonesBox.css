@@ -15,12 +15,11 @@
 #horizontal-box{
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
-    gap: 60px;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: fit-content;
+    
 }
 
 .moving-buttons{
