@@ -14,11 +14,12 @@
 
 #horizontal-box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: fit-content;
+
     
 }
 
@@ -55,6 +56,7 @@
     color: white;
     width: 80%;
     margin-top: 10px;
+    height: 50px;
     font-family: 'Oxygen', 'sans-serif';
     cursor: pointer;
 }
@@ -64,5 +66,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.smartphones-header{
+    width: 350px;
+    height: 300px;
 }
 

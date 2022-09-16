@@ -37,12 +37,12 @@ export default function SmartphonesBox(smartphones: {
     const [rightButtonStatus, setRightButtonStatus] = useState('active')
     const [leftButtonStatus, setLeftButtonStatus] = useState('disabled')
     const [leftOrRight, setLeftOrRight] = useState('none')
-    const [animation, setAnimation] = useState({ opacity: [0, 0.4, 0.5, 0.9, 1],x:[-200, 0] })
+    const [animation, setAnimation] = useState({ opacity: [0, 0.4, 0.5, 0.9, 1],x:[-50, 0] })
 
     useEffect(() => {
         if (phoneMover % 2 === 0) {
-            setAnimation({ ...animation, opacity: [0, 0.3, 0.5, 0.8, 1], x: leftOrRight === 'right'? [310, 0]: [-310, 0]})
-            } else { setAnimation({ ...animation, opacity: [0, 0.2, 0.4, 0.9, 1], x: leftOrRight === 'right'? [305, 0]: [-305, 0] }) 
+            setAnimation({ ...animation, opacity: [0, 0.3, 0.5, 0.8, 1], x: leftOrRight === 'right'? [50, 0]: [-50, 0]})
+            } else { setAnimation({ ...animation, opacity: [0, 0.2, 0.4, 0.9, 1], x: leftOrRight === 'right'? [55, 0]: [-55, 0] }) 
     }
     }, [phoneMover, animation, leftOrRight])
 
@@ -67,6 +67,8 @@ return (
                         id='smartphone'>
                         <img src={smartphones.devices[phoneMover].imageAddress} alt={smartphones.devices[phoneMover].name + "Picture"} id='smartphone-image' draggable={false}></img>
                         <p style={{ textAlign: 'center', fontFamily: `Open Sans, san-serif`, padding: '10px' }}>{smartphones.devices[phoneMover].name}</p>
+                    </motion.div>
+                      
                         <motion.button className='add-to-shoppingCart'
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
@@ -103,8 +105,8 @@ return (
 
                                 }))}>View Specs</motion.button>
                         </Link>
-
-                    </motion.div>
+                    
+                   
                 </div>
 
                 <img className="moving-buttons" src={RigthPointingArrow}
