@@ -41,3 +41,8 @@
     gap: 3px;
     font-weight: bold;
 }
+
+#spec-phone-image{
+    border: 1px solid #5A3F9E;
+    border-radius: 10px;
+}

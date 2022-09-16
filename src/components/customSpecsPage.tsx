@@ -1,6 +1,6 @@
 import { useAppSelector } from '../features/hooks'
 import '../css/customSpecsPage.css';
-
+import unknownPhone from '../icons/unknownPhone.svg';
 export default function CustomSpecsPage() {
 
     const phone = useAppSelector(state => state.specsReducer)
@@ -10,8 +10,8 @@ export default function CustomSpecsPage() {
         <>
             <div className='specific-device-container'>
                 <div id='smartphone-and-its-name' style={{ display: 'flex', fontFamily: `Oxygen, sans-serif`, textAlign: 'center', justifyContent: 'space-around', alignItems: 'center' }}>
-                    <img src={phone.imageAddress} alt={phone.name + "Picture"}></img>
-                    <h2>{phone.name}</h2>
+                   {phone.imageAddress === '' ? <img src={unknownPhone} id='spec-phone-image' alt='Phone frame with question mark'></img> :  <img src={phone.imageAddress} alt={phone.name + "Picture"} draggable={false}></img>}
+                    <h2>{phone.name===''?"No Phone Selected":phone.name}</h2>
                 </div>
 
                 <div className='specifications'>
