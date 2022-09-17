@@ -19,8 +19,6 @@
     align-items: center;
     width: 100%;
     height: fit-content;
-
-    
 }
 
 .moving-buttons{
@@ -72,3 +70,12 @@
     height: 300px;
 }
 
+
+
+.shoppingCart-specs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}

@@ -9,7 +9,7 @@ function App() {
    <>
    <div className='app'>
       <Header />
-      <SmartphonesBox devices={SmartphonesData.smartphones} />
+      <div className='items'><SmartphonesBox devices={SmartphonesData.smartphones} /></div>
   </div>
    </>
   );
