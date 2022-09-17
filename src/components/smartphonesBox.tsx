@@ -41,7 +41,7 @@ export default function SmartphonesBox(smartphones: {
 
 
 
-
+    console.log(phoneMover)
     return (
         <>
             <div className='smartphones-header'>
@@ -58,13 +58,13 @@ export default function SmartphonesBox(smartphones: {
 
                             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                                 <img className="moving-buttons" alt={'Arrow Pointing to the Left'}
-                                    onClick={() => { phoneMover > 0 ? setPhoneMover(phoneMover - 1) : setLeftButtonStatus('disabled'); setRightButtonStatus('active') }}
+                                    onClick={() => { phoneMover > 0 ? setPhoneMover(phoneMover - 1) : setLeftButtonStatus('disabled'); setRightButtonStatus('active'); if(phoneMover === 1){ setLeftButtonStatus('disabled')} }}
                                     style={leftButtonStatus === 'disabled' ? { opacity: 0.5, cursor: 'unset' } : { opacity: 1, cursor: 'pointer' }}
                                     src={LeftPointingArrow} id='left-pointing-arrow'></img>
                                 <img src={smartphones.devices[phoneMover].imageAddress} alt={smartphones.devices[phoneMover].name + "Picture"} id='smartphone-image' draggable={false}></img>
 
                                 <img className="moving-buttons" src={RigthPointingArrow}
-                                    onClick={() => { phoneMover < smartphones.devices.length - 1 ? setPhoneMover(phoneMover + 1) : setRightButtonStatus('disabled'); setLeftButtonStatus('active') }}
+                                    onClick={() => { phoneMover < smartphones.devices.length - 1 ? setPhoneMover(phoneMover + 1) : setRightButtonStatus('disabled'); setLeftButtonStatus('active'); if(phoneMover === smartphones.devices.length - 2){ setRightButtonStatus('disabled')} }}
                                     alt={'Arrow Pointing to the Right'} id='right-pointing-arrow' style={rightButtonStatus === 'disabled' ? { opacity: 0.5, cursor: 'unset' } : { opacity: 1, cursor: 'pointer' }}></img>
                             </div>
                             <p style={{ textAlign: 'center', fontFamily: `Open Sans, san-serif`, padding: '10px' }}>{smartphones.devices[phoneMover].name}</p>
