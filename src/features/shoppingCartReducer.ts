@@ -1,13 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface ShoppingCart {
-    items: { id: number, name: string, imageAddress: string }[],
+    items: { id: number, name: string, imageAddress: string, quantity: 1 }[],
     numberOfItems: number
 }
 
 const initialState: ShoppingCart = {
-    items: [],
-    numberOfItems: 0
+    items: [{
+        id: 6,
+        name: 'Samsung Galaxy S20 FE 2022',
+        imageAddress: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-fe-5g.jpg",
+        quantity: 1
+    }],
+    numberOfItems: 1
 }
 
 const shoppingCartReducer = createSlice({
@@ -30,7 +35,8 @@ const shoppingCartReducer = createSlice({
             const phoneToAdd = {
                 id: action.payload.phoneId,
                 imageAddress: action.payload.imageAddress,
-                name: action.payload.name
+                name: action.payload.name,
+                quantity: action.payload.quantity
             }
 
 
@@ -47,10 +53,10 @@ const shoppingCartReducer = createSlice({
         removeItem: (state, action) => {
             let newItemsArray = []
             state.items.map(each => console.log(each.id))
-            for(let i = 0; i < state.items.length; i++) {
-                if(state.items[i].id !== action.payload.itemId){
+            for (let i = 0; i < state.items.length; i++) {
+                if (state.items[i].id !== action.payload.itemId) {
                     newItemsArray.push(state.items[i])
-            
+
                 }
             }
 
@@ -59,10 +65,25 @@ const shoppingCartReducer = createSlice({
                 items: newItemsArray,
                 numberOfItems: newItemsArray.length
             })
+        },
+
+        updateQuantity: (state, action) => {
+            for (let i = 0; i < state.items.length; i++) {
+                if (state.items[i].id === action.payload.id) {
+                    if (action.payload.action === 'plus') { state.items[i].quantity += 1 }
+
+                    if (action.payload.action === 'minus') {
+                        if (state.items[i].quantity > 1) {
+                            state.items[i].quantity -= 1
+                        }
+                    }
+                }
+            }
         }
     }
 })
 
 
-export const { addItem, removeItem } = shoppingCartReducer.actions;
+
+export const { addItem, removeItem, updateQuantity } = shoppingCartReducer.actions;
 export default shoppingCartReducer.reducer;

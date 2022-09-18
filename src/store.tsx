@@ -2,11 +2,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import shoppingCartReducer from './features/shoppingCartReducer';
 import  specsReducer from './features/specsReducer';
+import purchaseReducer from './features/purchaseReducer';
 
 const store = configureStore({
    reducer: {
     shoppingCartReducer: shoppingCartReducer,
-    specsReducer: specsReducer
+    specsReducer: specsReducer,
+    purchaseReducer: purchaseReducer,
    }
 })
 

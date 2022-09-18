@@ -1,5 +1,4 @@
 import '../css/header.css';
-import {useEffect, useState} from 'react';
 import { useAppSelector } from '../features/hooks';
 import SmartphoneIcon from '../icons/smartphone-icon.svg';
 import ShoppingCartIcon from '../icons/shopping-cart-icon.svg';

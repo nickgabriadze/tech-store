@@ -73,11 +73,41 @@
     margin-top: 10px;
     font-family: 'Oxygen', 'sans-serif';
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 #buy-remove {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#quantity{
+    display: flex;
+    gap:10px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.quantity-button{
+    background-color: #5a3f9e;
+    color: white;
+    padding: 10px;
+    border-radius: 20px ;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+}
+
+#buy-remove-buttons{
+    display :flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
 }

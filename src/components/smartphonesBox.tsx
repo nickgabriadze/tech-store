@@ -48,9 +48,6 @@ export default function SmartphonesBox(smartphones: {
                 <h3 style={{ textAlign: 'center', fontFamily: `Oxygen, sans-serif`, color: '#5a3f9e' }}>Smartphones</h3>
 
                 <div className="smartphones-container">
-
-
-
                     <div id='horizontal-box'>
 
                         <motion.div
@@ -77,7 +74,8 @@ export default function SmartphonesBox(smartphones: {
                                 onClick={() => dispatch(addItem({
                                     phoneId: smartphones.devices[phoneMover].id,
                                     imageAddress: smartphones.devices[phoneMover].imageAddress,
-                                    name: smartphones.devices[phoneMover].name
+                                    name: smartphones.devices[phoneMover].name,
+                                    quantity: 1
                                 }))}>Add to Shopping Cart</motion.button>
                             <Link to={'/chosen-device-specs'}>
                                 <motion.button

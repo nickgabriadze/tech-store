@@ -22,7 +22,7 @@ interface SpecsInterface {
         selfieCamera: string,
         battery: string,
         colors: string
-    }
+    },
 }
 
 const initialState: SpecsInterface = {
@@ -46,7 +46,8 @@ const initialState: SpecsInterface = {
         selfieCamera:"" ,
         battery: "",
         colors: ""
-    }
+    },
+   
 
 }
 
