@@ -52,7 +52,8 @@ export default function ShoppingCart() {
                                     dispatch(setItemInfo({
                                         id: eachPhone.id,
                                         name: eachPhone.name,
-                                        imageAddress: eachPhone.imageAddress
+                                        imageAddress: eachPhone.imageAddress,
+                                        quantity: eachPhone.quantity,
                                     }))
                                 }} className='shopping-cart-buttons'>Buy</button>
                                 </Link>

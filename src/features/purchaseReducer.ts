@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-interface Purchase {
+export interface Purchase {
     items: {id: number, name: string, quantity: number, imageAddress: string}[],
     personalInfo: {
         name: string,
