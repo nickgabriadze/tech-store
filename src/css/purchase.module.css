@@ -32,5 +32,15 @@ input{
     border-radius: 5px;
     font-size: fit-content;
     font-family: 'Open Sans', 'sans-serif';
+}
 
+.purchase-button{
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-family: 'Open Sans', 'sans-serif';
+    border: 1px solid #5a3f9e;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
 }

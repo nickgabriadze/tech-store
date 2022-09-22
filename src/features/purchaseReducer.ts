@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export interface Purchase {
-    items: {id: number, name: string, quantity: number, imageAddress: string}[],
+    items: { id: number, name: string, quantity: number, imageAddress: string }[],
     personalInfo: {
         name: string,
         homeAddress: {
             country: string,
-            zip: number,
+            zip: string,
             address: string
         }
     }
@@ -19,7 +19,7 @@ const initialState: Purchase = {
         name: '',
         homeAddress: {
             country: '',
-            zip: 0,
+            zip: '',
             address: ''
         }
     }
@@ -33,15 +33,30 @@ const purchaseReducer = createSlice({
         setItemInfo: (state, action) => {
             return ({
                 ...state,
-                items: [...state.items,{
+                items: [...state.items, {
                     id: action.payload.id,
                     name: action.payload.name,
                     quantity: action.payload.quantity,
-                    imageAddress:action.payload.imageAddress
+                    imageAddress: action.payload.imageAddress
                 }]
             })
+        },
+
+        savePersonalInfo: (state, action) => {
+            return ({
+                ...state,
+                personalInfo: {
+                    name: action.payload.name,
+                    homeAddress: {
+                        ...state.personalInfo.homeAddress,
+                        country: action.payload.country,
+                        zip: action.payload.zip,
+                        address: action.payload.address
+                    }
+                }
+            })
         }
-        
+
     }
 
 
@@ -49,5 +64,5 @@ const purchaseReducer = createSlice({
 })
 
 
-export const {setItemInfo} = purchaseReducer.actions;
+export const { setItemInfo, savePersonalInfo } = purchaseReducer.actions;
 export default purchaseReducer.reducer;

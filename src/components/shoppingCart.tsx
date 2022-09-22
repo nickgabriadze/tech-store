@@ -21,7 +21,7 @@ export default function ShoppingCart() {
 
                 <div id='items-container'>
                     {smartphones.length > 0 ? smartphones.map(eachPhone => {
-                        console.log(eachPhone.quantity)
+                        
                         return (
                             <div key={nanoid()} className='shopping-cart-items'>
 
