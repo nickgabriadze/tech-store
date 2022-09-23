@@ -31,7 +31,7 @@ export default function SmartphonesBox(smartphones: {
         }
     }[]
 }) {
-
+   
     const dispatch = useAppDispatch();
     const [phoneMover, setPhoneMover] = useState(0);
     const [rightButtonStatus, setRightButtonStatus] = useState('active')
@@ -39,9 +39,6 @@ export default function SmartphonesBox(smartphones: {
     // const [leftOrRight, setLeftOrRight] = useState('none')
     // const [animation, setAnimation] = useState({ opacity: [0, 0.4, 0.5, 0.9, 1],x:[-50, 0] })
 
-
-
-    console.log(phoneMover)
     return (
         <>
             <div className='smartphones-header'>
@@ -61,7 +58,7 @@ export default function SmartphonesBox(smartphones: {
                                 <img src={smartphones.devices[phoneMover].imageAddress} alt={smartphones.devices[phoneMover].name + "Picture"} id='smartphone-image' draggable={false}></img>
 
                                 <img className="moving-buttons" src={RigthPointingArrow}
-                                    onClick={() => { phoneMover < smartphones.devices.length - 1 ? setPhoneMover(phoneMover + 1) : setRightButtonStatus('disabled'); setLeftButtonStatus('active'); if(phoneMover === smartphones.devices.length - 2){ setRightButtonStatus('disabled')} }}
+                                    onClick={() => { phoneMover < smartphones.devices.length - 1  ? setPhoneMover(phoneMover + 1) : setRightButtonStatus('disabled'); setLeftButtonStatus('active'); if(phoneMover === smartphones.devices.length - 2){ setRightButtonStatus('disabled')} }}
                                     alt={'Arrow Pointing to the Right'} id='right-pointing-arrow' style={rightButtonStatus === 'disabled' ? { opacity: 0.5, cursor: 'unset' } : { opacity: 1, cursor: 'pointer' }}></img>
                             </div>
                             <p style={{ textAlign: 'center', fontFamily: `Open Sans, san-serif`, padding: '10px' }}>{smartphones.devices[phoneMover].name}</p>
