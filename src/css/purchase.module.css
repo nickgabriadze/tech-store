@@ -44,3 +44,8 @@ input{
     margin-top: 20px;
     cursor: pointer;
 }
+
+.img-checkMark{
+    width: 40px;
+    height: 40px;
+}
