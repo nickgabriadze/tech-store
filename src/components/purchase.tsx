@@ -82,7 +82,7 @@ export default function Purchase() {
 
 
                 </div>
-                {letBuyerPurchase ? <div style={{ paddingTop: '10px', display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', fontFamily: `Open Sans, sans-serif` }}>
+                {letBuyerPurchase ? <div style={{ paddingTop: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', fontFamily: `Open Sans, sans-serif` }}>
                     <img alt={'Success Check Mark'} src={circledCheckMarkIcon} className={purchaseStyles['img-checkMark']}></img>
                     <p>Thanks for the purchase!</p></div> :
                     <div
@@ -93,7 +93,7 @@ export default function Purchase() {
                                 dispatch(savePersonalInfo({
                                     buyerInfo
                                 }))
-                                
+
                                 setLetBuyerPurchase(true)
                                 dispatch(removeItem({
                                     itemId: itemToBeBought.items.id
