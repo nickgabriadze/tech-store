@@ -5,6 +5,7 @@ import paymentOptions from '../icons/PaymentOptions.jpg';
 import { savePersonalInfo } from '../features/purchaseReducer';
 import checkPersonalInfo from '../features/checkPersonalInfo';
 import circledCheckMarkIcon from '../icons/check-circle-icon.svg';
+import { removeItem } from '../features/shoppingCartReducer';
 
 export default function Purchase() {
 
@@ -82,7 +83,7 @@ export default function Purchase() {
 
                 </div>
                 {letBuyerPurchase ? <div style={{ paddingTop: '10px', display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', fontFamily: `Open Sans, sans-serif` }}>
-                    <img src={circledCheckMarkIcon} className={purchaseStyles['img-checkMark']}></img>
+                    <img alt={'Success Check Mark'} src={circledCheckMarkIcon} className={purchaseStyles['img-checkMark']}></img>
                     <p>Thanks for the purchase!</p></div> :
                     <div
                         className={purchaseStyles['purchase-button']}
@@ -92,7 +93,11 @@ export default function Purchase() {
                                 dispatch(savePersonalInfo({
                                     buyerInfo
                                 }))
+                                
                                 setLetBuyerPurchase(true)
+                                dispatch(removeItem({
+                                    itemId: itemToBeBought.items.id
+                                }))
                             } else {
                                 setCheckAgain(true)
                             }

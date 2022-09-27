@@ -56,7 +56,6 @@ const shoppingCartReducer = createSlice({
             for (let i = 0; i < state.items.length; i++) {
                 if (state.items[i].id !== action.payload.itemId) {
                     newItemsArray.push(state.items[i])
-
                 }
             }
 
